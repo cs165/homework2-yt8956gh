@@ -1,4 +1,4 @@
-.choice-grid{
+.grid-layout{
     display:flex;
     flex-direction: row;
     flex-wrap:wrap;
@@ -9,10 +9,29 @@
 .grid-item{
     width:32.5%;
     box-sizing: border-box;
-    margin: 10px 0;/* flex container’s margins do not collapse with the margins of its contents.*/
+    margin-bottom: 20px;
     background-color: #f4f4f4;
     border: 1px #dcdcdc solid;
     padding: 10px;
+    cursor: pointer;
+}
+
+.grid-item img.checkbox{
+    content: url("./images/unchecked.png");
+}
+
+
+
+.grid-item-selected{
+    background-color: #cfe3ff;
+}
+
+.grid-item-selected img.checkbox{
+    content: url("./images/checked.png");
+}
+
+.grid-item-unselected{
+    opacity: 0.6;
 }
 
 img{
@@ -26,7 +45,6 @@ img.checkbox{
     height: 20px;
     width:20px;
 }
-
 
 @media screen and (max-width: 700px){
 
@@ -43,4 +61,35 @@ img.checkbox{
     .grid-item{
         width: 49%;
     }
+}
+
+#restart{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #cecece;
+    width: 100%;
+    height: 50px;
+    font-size: 1.5rem;
+    line-height: 50px
+}
+
+#restart:hover{
+    background-color: #e0e0e0;
+}
+
+
+#result{
+    margin: 20px 0;
+    padding: 20px;
+}
+
+#title{
+    margin-bottom: 18px;
+    font-size: 1.65rem;
+    font-weight: bold;
+}
+
+#contents{
+    margin-bottom: 18px;
 }
