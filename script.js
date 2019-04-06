@@ -72,6 +72,9 @@ function restart() {
         allGridItem[i].classList.remove('grid-item-selected','grid-item-unselected','grid-item');
         allGridItem[i].classList.add('grid-item');
     }
+
+    let element = document.getElementById('top');
+    element.scrollIntoView({behavior:"smooth"});
 }
 
 function makeAll_Unselected(id){
