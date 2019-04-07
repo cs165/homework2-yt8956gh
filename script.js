@@ -69,9 +69,13 @@ function restart() {
     let allGridItem = document.querySelectorAll('.grid-item');
     for(let i=0;i<allGridItem.length;i++)
     {
-        allGridItem[i].classList.remove('grid-item-selected','grid-item-unselected','grid-item');
-        allGridItem[i].classList.add('grid-item');
+        allGridItem[i].classList.remove('grid-item-selected','grid-item-unselected');
     }
+
+    let title = document.getElementById('title');
+    let contents = document.getElementById('contents');
+    title.innerHTML = '';
+    contents.innerHTML = '';
 
     let element = document.getElementById('top');
     element.scrollIntoView({behavior:"smooth"});
